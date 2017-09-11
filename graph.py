@@ -25,6 +25,9 @@ class Graph:
     def printGraph(self):
         print(self.nodes)
 
+    def getGraph(self):
+        return self.nodes
+
     # search through graph and find shortest path
     def bfs(self, startingNode, target):
         q = [startingNode]
@@ -45,6 +48,7 @@ class Graph:
                 # if the node is not in history, add it to the q
                 # in other words, never go backwards - only visit each node once
                 if target not in pathLengths:
+                    print ('oopps')
                     return 'infinity'
                 else:
                     result = pathLengths[target]
