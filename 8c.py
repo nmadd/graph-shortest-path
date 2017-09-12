@@ -1,10 +1,11 @@
 from graph import Graph
-from graphTester2 import graphTester
+from graphTester import graphTester
 
 testGraph = Graph()
 testGraph.initGraph(1000, .1)
 
-graphTester(testGraph, 1000, 10000)
+print(graphTester(testGraph, 1000, 1000, True))
 
-# 10,000 tests
-# ('Average path length', 1.8986)
+# Results of 10,000 tests:
+# Test 1: ('Average path length', 1.8986)
+# Test 2: ('Average path length', 1.9018)

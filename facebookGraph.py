@@ -1,6 +1,3 @@
-import graphTester2
-import graph as graphConstructor
-
 # parse raw facebook data and return list of tuples
 def parseFacebookData(file_path):
     graphData = []
@@ -23,8 +20,3 @@ def createFacebookGraph(rawData):
         graph[node1].add(node2)
         graph[node2].add(node1)
     return graph
-
-facebookGraph = graph.Graph(createGraph(graphData))
-
-
-graphTester2.graphTester(facebookGraph, 4031, 500)

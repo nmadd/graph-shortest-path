@@ -4,4 +4,4 @@ from facebookGraph import parseFacebookData, createFacebookGraph
 
 facebookGraph = Graph(createFacebookGraph(parseFacebookData('facebook_combined.txt')))
 
-graphTester(facebookGraph, 4038, 100)
+print(graphTester(facebookGraph, 4038, 10, True))
