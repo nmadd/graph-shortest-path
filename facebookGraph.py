@@ -1,14 +1,17 @@
 import graphTester2
-import graph
+import graph as graphConstructor
 
-data = open('facebook_combined.txt')
-lines = data.read().splitlines()
-graphData = []
+# parse raw facebook data and return list of tuples
+def parseFacebookData(file_path):
+    graphData = []
+    data = open(file_path)
+    lines = data.read().splitlines()
+    for line in lines:
+        graphData.append(line.split())
+    return graphData
 
-for line in lines:
-    graphData.append(line.split())
-
-def createGraph(rawData):
+# take parsed facebook data and create a graph dictionary, which can then be used in the Graph class constructor
+def createFacebookGraph(rawData):
     graph = {}
     for pair in rawData:
         node1 = int(pair[0])

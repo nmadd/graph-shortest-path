@@ -40,7 +40,6 @@ class Graph:
             for node in self.nodes[currentNode]:
                 if node not in history:
                     q.append(node)
-                # not sure about this part:
                 if node not in pathLengths:
                     pathLengths[node] = pathLengths[currentNode] + 1
 
@@ -48,7 +47,6 @@ class Graph:
                 # if the node is not in history, add it to the q
                 # in other words, never go backwards - only visit each node once
                 if target not in pathLengths:
-                    print ('oopps')
                     return 'infinity'
                 else:
                     result = pathLengths[target]

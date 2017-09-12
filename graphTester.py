@@ -16,10 +16,10 @@ def graphTester(graph_size, graph_probability, number_of_tests):
         if type(shortest_path) == int:
             pathLengths.append(shortest_path)
         # execution trace
-        if(i < 100 and i < number_of_tests):
-                print("Node A: ", node1, "Node B: ", node2, "Path length: ", shortest_path)
+        # if(i < 100 and i < number_of_tests):
+        #         print("Node A: ", node1, "Node B: ", node2, "Path length: ", shortest_path)
 
 
     # calculate average path length
     avgPathLength = sum(pathLengths) / float(len(pathLengths))
-    print('Average path length', avgPathLength)
+    print('Average path length', graph_probability, avgPathLength)
