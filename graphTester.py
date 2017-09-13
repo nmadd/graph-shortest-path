@@ -19,9 +19,7 @@ def graphTester(input_graph, graph_size, number_of_tests, execution_trace_flag=F
         # execution trace (if optional flag == True)
         if execution_trace_flag == True:
             if(i < 100 and i < number_of_tests):
-                    print "{}) Node A: {}, Node B: {}, Shortest path: {}".format(i + 1, node1, node2, shortest_path)
-
-
+                    print("{}) Node A: {}, Node B: {}, Shortest path: {}".format(i + 1, node1, node2, shortest_path))
     # calculate average path length
     avgPathLength = sum(pathLengths) / float(len(pathLengths))
     return 'Average path length: {}'.format(avgPathLength)
