@@ -1,12 +1,15 @@
 from graph import Graph
 from graphTester import graphTester
 
-graphSize = 4039
+graphSize = 1000
+probability = .1
+numberOfTests = 10000
+executionTrace = True
 
 testGraph = Graph()
-testGraph.initGraph(graphSize, .0108)
+testGraph.initGraph(graphSize, probability)
 
-print(graphTester(testGraph, graphSize, 1000, True))
+print(graphTester(testGraph, graphSize, numberOfTests, executionTrace))
 
 # Results of 10,000 tests:
 # Test 1: ('Average path length', 1.8986)

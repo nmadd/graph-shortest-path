@@ -1,11 +1,14 @@
 from graph import Graph
 from graphTester import graphTester
 
-nums = [.01, .02, .03, .04, .05, .1, .15, .2, .25, .3, .35, .4, .45, .5]
-for num in nums:
+graphSize = 1000
+numberOfTests = 10000
+
+probabilities = [.01, .02, .03, .04, .05, .1, .15, .2, .25, .3, .35, .4, .45, .5]
+for probability in probabilities:
     testGraph = Graph()
-    testGraph.initGraph(1000, num)
-    print(graphTester(testGraph, 1000, 100))
+    testGraph.initGraph(graphSize, probability)
+    print(graphTester(testGraph, graphSize, numberOfTests))
 
 # 10,000 tests
 # ('Average path length', 0.01, 3.2585947679663225)
